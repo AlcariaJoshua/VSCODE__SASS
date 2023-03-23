@@ -1,14 +1,14 @@
 .header{
     width: 100%;
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    box-shadow: inset rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
     .container{
         padding: 0;
     }
-
         &__wrapper{
             padding: 1.5rem;
             display: flex;
             justify-content: space-between;
+            
             .left{
                 display: flex;
                 gap: 1rem;
@@ -24,8 +24,8 @@
                     }
 
 
-                    
-                
+
+
                 }
                 .burger__btn.open span:first-child{
                     transform: translateY(.30rem) rotate(-25deg) rotate(180deg) rotate(-180deg);
@@ -49,8 +49,10 @@
 
             .right{
                 position: relative;
-             
-               a{
+                transition: ease .6s;
+                padding: 0rem 1rem;
+               
+
                 span{
                         display: flex;
                         flex-direction: column;
@@ -60,14 +62,157 @@
                         background-color: black;
                  }
                  span:nth-child(2){
-                    margin: .7rem 0;
+                    margin: .5rem 0;
                  }
-               }
+                }
+                
+               
+        }
+
+        @include mediaQuery($desktop){
+            .right{
+                display: none;
+            }
+            .burger__btn{
+                display: none;
+            }
+
+           .left{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           }
+
+          
+        }
+       
+        
+        
+}
+ //desktop
+.timeModal__deskstop{
+    display: none;
+    place-items: center;
+    place-content: center;
+    gap: 5rem;
+    padding: 0;
+    margin: 0;
+    
+ 
+    .time, .contact{
+        display: flex;
+        place-items: center;
+        padding: 0;
+        margin: 0;
+        i{
+            font-size: 2rem;
+            padding-right: 1.5rem;
+            color: #01b3a7;
+        }
+        p{
+            font-size: 1.5rem;
+            margin: 0;
+            font-weight: 400;
+        }
+        
+        
+    }
+    
+        @include mediaQuery($desktop){
+            display: flex;
+            
+          
+        }
+
+}
+
+
+.navigation__desktsop{
+    background-color: #162e44 ;
+    .navigation__wrapper{
+        display: none;
+        justify-content: space-between;
+        ul{
+            display: flex;
+            gap: 3rem;
+            .active{
+                background-color: rgb(255, 255, 255, .2);
+                border-top: 3px solid #01b3a7;
+              
+            }
+            li{
+            font-size: 2rem;
+            font-weight: 500;
+            padding: 2rem 1rem;
+            border-top: 3px solid transparent;
+            
+                a{
+                    color: white;
+                    border: none;
+                }
+                
+            }
+            li:hover{
+                background-color: rgb(255, 255, 255, .2);
+                border-top: 3px solid #01b3a7;
+            
+            }
+            
+           
+        }
+        .icon{
+            ul{
+                gap: 1rem;
+                li{
+                    font-size: 1.7rem;
+                }
+                a:hover{
+                    color: #01b3a7;
+                    transition: .5s ease;
+                }
+            }
+        }
+        @include mediaQuery($desktop){
+            display: flex;
+        }
+    }
+
+}
+
+//mobile
+.time__modal{
+    position: absolute;
+    right: 0;
+    width: 25rem;
+    padding: 1.5rem;
+    top: 5rem;
+    z-index: 1;
+    background-color: white;
+        .time, .contact{
+            display: flex;
+            margin: 2rem 1rem;
+            p{
+                margin: 0;
+                font-size: 1.7rem;
+                font-weight: 450;
+            }
+            i{
+                font-size: 1.8rem;
+                padding-right: 1.5rem;
             }
         }
 
-      
-      
+        .time i, .contact i{
+            color: #01b3a7;
+        }
+       
+        @include mediaQuery($desktop){
+            .time__modal{
+                display: block;
+            }
+        }
+
+       
 }
 
 .navigation{
@@ -75,7 +220,8 @@
     width: 30rem;
     position: absolute;
     left: -40rem;
-  
+    background-color: white;
+
     &__wrapper{
         .icons{
             border-bottom: 1px solid black;
@@ -87,10 +233,14 @@
                 li{
                     padding: 1rem;
                     font-size: 2rem;
+                    i:hover{
+                        color: #01b3a7;
+                        transition: ease .5s;
+                    }
                 }
-                
+
             }
-        
+
         }
 
         .nav{
@@ -104,11 +254,12 @@
                     color: white;
                     font-weight: 400;
                 }
-             
+
             }
             ul{
-               
+
                 li{
+                    position: relative;
                     padding: 2rem 1rem;
                     font-size: 1.8rem;
                     display: flex;
@@ -118,7 +269,15 @@
                     transition: ease .5s;
                     i{
                         font-size: 1.4rem;
+
                     }
+                    .under{
+                        position: absolute;
+                        background-color: pink;
+                        top: 12rem;
+                        height: 10vh;
+                    }
+                    
                 }
                 li:hover{
                     background-color: #01b3a7 ;
@@ -131,9 +290,33 @@
 
             }
         }
-    }   
+    }
+   
 }
 
 .navigation.open{
     left: 0;
 }
+
+.time__modal{
+    opacity: 0;
+    transition: ease-in .3s;
+}
+
+.time__modal.active{
+    opacity: 1;
+    transition: ease-in-out .3s;
+}
+
+
+.right.active {
+    transform: scale(.6);
+    transition: ease .6s;
+    transform: rotateX(180deg);
+
+}
+
+
+
+//banner
+

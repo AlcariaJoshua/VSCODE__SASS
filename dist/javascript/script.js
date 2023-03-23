@@ -4,5 +4,23 @@ burger__btn.addEventListener("click", () => {
     burger__btn.classList.toggle("open");
     navigation.classList.toggle("open");
     navigation.style=("transition: .5s ease")
+   
+});
 
+
+const chevron = document.querySelector(".fa-chevron-down");
+const under = document.querySelector(".under");
+chevron.addEventListener("click", () => {
+    chevron.classList.toggle("open");
+    under.classList.toggle("open");
+    under.style=("transition: .5s ease")
+   
+});
+
+const right = document.querySelector(".right");
+const time__modal = document.querySelector(".time__modal");
+right.addEventListener("click", () => {
+    right.classList.toggle("active");
+    time__modal.classList.toggle("active");
+    
 });
