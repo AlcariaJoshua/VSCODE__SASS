@@ -24,3 +24,22 @@ right.addEventListener("click", () => {
     time__modal.classList.toggle("active");
     
 });
+
+
+const nav = document.querySelector(".nav ul li");
+nav.addEventListener("click", () => {
+    nav.nextElementSibling.classList.toggle("open")
+    nav.querySelector("i").classList.toggle("open");
+   
+});
+
+var slider = tns({
+    container: '.slider',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    axis: "vertical",
+    speed: 300,
+    
+  });
+
