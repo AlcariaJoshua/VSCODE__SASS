@@ -845,6 +845,9 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   transform: rotateX(180deg);
 }
 
+.banner {
+  background-color: #f7f7f7;
+}
 .banner .banner__wrapper {
   z-index: 999;
 }
@@ -955,10 +958,292 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   transform: scale(1.1);
   transition: all ease 0.35s;
 }
+.picture .container .img .title {
+  position: relative;
+}
+.picture .container .img .title h3 {
+  position: absolute;
+  left: 18rem;
+  width: 100%;
+  max-width: 50rem;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  transform: translateX(-50%);
+  bottom: 5rem;
+  color: #ffffff;
+  letter-spacing: normal;
+}
 @media screen and (min-width: 977px) {
   .picture .container {
     flex-direction: row;
     position: relative;
     top: -17rem;
+  }
+}
+
+.bottom__btn {
+  display: flex;
+  place-content: center;
+}
+.bottom__btn a {
+  padding: 3rem;
+  font-size: 2rem;
+}
+.bottom__btn a:hover {
+  transform: scale(1.1);
+  transition: ease 0.5s;
+}
+@media screen and (min-width: 977px) {
+  .bottom__btn {
+    margin-top: -15rem;
+  }
+}
+
+.section {
+  margin: 5rem 0;
+  padding: 5rem 0;
+}
+.section__wrapper .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section__wrapper .content .title {
+  padding: 3.5rem 0;
+}
+.section__wrapper .content .title h3 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+.section__wrapper .content .choices .subtitle__choices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-row-gap: 1rem;
+  margin-bottom: 3rem;
+}
+.section__wrapper .content .choices .subtitle__choices a {
+  padding: 0 1.5rem;
+  font-size: 2.5rem;
+  opacity: 0.7;
+  border-top: 1px solid rgba(12, 12, 12, 0.2);
+  border-bottom: 1px solid rgba(12, 12, 12, 0.2);
+}
+.section__wrapper .content .choices .description {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.section__wrapper .content .choices #des2, .section__wrapper .content .choices #des3 {
+  display: none;
+}
+.section__wrapper .content .section__button {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.section__wrapper .content .section__button .active {
+  background-color: #01b3a7;
+  padding: 1.5rem 4rem;
+  border: 1px solid transparent;
+  color: white;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.section__wrapper .content .section__button .active:hover {
+  background-color: white;
+  border: 1px solid black;
+  transition: ease-in-out 0.4s;
+  color: black;
+  font-weight: 600;
+}
+.section__wrapper .content .section__button .non__active {
+  padding: 1.5rem 4rem;
+  color: black;
+  font-weight: 400;
+  font-size: 2rem;
+  border: 1px solid black;
+}
+.section__wrapper .content .section__button .non__active:hover {
+  border: 1px solid transparent;
+  background-color: #01b3a7;
+  transition: ease-in-out 0.4s;
+}
+@media screen and (min-width: 977px) {
+  .section__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 5rem;
+  }
+  .section__wrapper .content {
+    align-items: flex-start;
+  }
+  .section__wrapper .content .choices .description {
+    text-align: unset;
+  }
+  .section__wrapper .content .choices .subtitle__choices {
+    justify-content: unset;
+  }
+  .section__wrapper .content .choices .subtitle__choices a {
+    padding: 0rem 1rem;
+    border-top: none;
+    border-bottom: 3px solid rgba(12, 12, 12, 0.2);
+  }
+  .section__wrapper .content .choices .section__button {
+    justify-content: unset;
+  }
+}
+
+.services .title {
+  font-size: 3rem;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+.services .title h2 {
+  font-weight: 600;
+}
+.services__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.services__wrapper .card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 7px solid rgba(12, 12, 12, 0.2);
+  padding: 2.5rem;
+}
+.services__wrapper .card .icon {
+  padding-bottom: 2rem;
+}
+.services__wrapper .card .icon i {
+  color: #01b3a7;
+  font-size: 5rem;
+}
+.services__wrapper .card .card__content h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+.services__wrapper .card .card__content p {
+  font-weight: 400;
+  font-size: 1.6rem;
+  opacity: 0.8;
+}
+.services__wrapper .card .card__content h3:hover {
+  color: #01b3a7;
+  transition: ease 0.7s;
+}
+@media screen and (min-width: 977px) {
+  .services__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .services__wrapper .card:hover {
+    transition: ease-out 0.2s;
+    border: 7px solid transparent;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+}
+
+.hot-tours {
+  margin: 5rem 0;
+  padding: 3rem 0;
+}
+.hot-tours .title h2 {
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 4rem;
+}
+.hot-tours__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+.hot-tours__wrapper .tour-card .image {
+  position: relative;
+  overflow: hidden;
+}
+.hot-tours__wrapper .tour-card .image img {
+  display: inline-block;
+  max-width: 100%;
+  height: 100%;
+}
+.hot-tours__wrapper .tour-card .image .priceTag {
+  position: absolute;
+  top: 0rem;
+  right: 0;
+  color: white;
+  background-color: #01b3a7;
+}
+.hot-tours__wrapper .tour-card .image .priceTag p {
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding: 0.3rem;
+}
+.hot-tours__wrapper .tour-card img:hover {
+  transform: scale(1.1);
+  transition: ease-in-out 0.5s;
+}
+.hot-tours__wrapper .tour-card .rating .title-rating h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+.hot-tours__wrapper .tour-card .rating ul {
+  display: flex;
+  padding: 1rem 0;
+  gap: 0.5rem;
+}
+.hot-tours__wrapper .tour-card .rating ul li {
+  color: gold;
+}
+.hot-tours__wrapper .tour-card .rating .rating-content {
+  width: 100%;
+  max-width: 20rem;
+  opacity: 0.7;
+}
+.hot-tours__wrapper .tour-card .rating .rating-content p {
+  padding: 1rem 0;
+}
+.hot-tours__wrapper .tour-card .rating .button {
+  border: 1px solid black;
+}
+.hot-tours__wrapper .tour-card .rating .button:hover {
+  border: 1px solid transparent;
+}
+@media screen and (min-width: 977px) {
+  .hot-tours__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .hot-tours__wrapper .tour-card {
+    display: flex;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    gap: 5rem;
+  }
+  .hot-tours__wrapper .tour-card .image .priceTag {
+    position: absolute;
+    top: 0rem;
+    right: -57rem;
+    border-bottom-left-radius: 50%;
+  }
+  .hot-tours__wrapper .tour-card .image .priceTag p {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 0.3rem 3rem;
+  }
+  .hot-tours__wrapper .tour-card .rating {
+    padding: 3rem 0;
+  }
+  .hot-tours__wrapper .tour-card .rating .rating-content {
+    max-width: 50rem;
+  }
+  .hot-tours__wrapper .tour-card .rating .button {
+    width: 20rem;
   }
 }/*# sourceMappingURL=main.css.map */

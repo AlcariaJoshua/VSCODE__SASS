@@ -43,3 +43,26 @@ var slider = tns({
     
   });
 
+// const choices = document.querySelectorAll(".title-choice");
+// const text = document.querySelectorAll(".des-text");
+
+// choices.forEach((choice) => {
+//     choice.addEventListener('click', () =>{
+//         removeActiveStar();
+//         choice.classList.add('active');
+//         const activeContent= document.querySelector(`#${star.id}-content`);
+//         removeActiveContent();
+//         activeContent.classList.add("active");
+//       })
+// })
+
+// function removeActiveStar() {
+//     choice.forEach((star) => {
+//       star.classList.remove('active');
+//     })
+//   }
+//   function removeActiveContent() {
+//     text.forEach((star) => {
+//       star.classList.remove('active');
+//     })
+//   }
