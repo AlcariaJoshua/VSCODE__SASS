@@ -26,12 +26,14 @@ right.addEventListener("click", () => {
 });
 
 
-const nav = document.querySelector(".nav ul li");
-nav.addEventListener("click", () => {
-    nav.nextElementSibling.classList.toggle("open")
-    nav.querySelector("i").classList.toggle("open");
-   
-});
+const kamote = document.querySelectorAll('.nav__btn');
+kamote.forEach((kamoteq) => {
+    kamoteq.addEventListener('click', () => {
+        kamoteq.nextElementSibling.classList.toggle('open');
+        kamoteq.querySelector("i").classList.toggle("open");
+       
+    })
+})
 
 var slider = tns({
     container: '.slider',
@@ -43,26 +45,48 @@ var slider = tns({
     
   });
 
-// const choices = document.querySelectorAll(".title-choice");
-// const text = document.querySelectorAll(".des-text");
+// const links = document.querySelectorAll(".links");
+// const des = document.querySelectorAll(".des");
 
-// choices.forEach((choice) => {
-//     choice.addEventListener('click', () =>{
+// links.forEach((link) => {
+//     link.addEventListener('click', () =>{
 //         removeActiveStar();
-//         choice.classList.add('active');
-//         const activeContent= document.querySelector(`#${star.id}-content`);
+//         link.classList.add('active');
+//         const Content= document.querySelector(`#${link.id}-content`);
 //         removeActiveContent();
-//         activeContent.classList.add("active");
+//         Content.classList.add("active");
 //       })
 // })
 
 // function removeActiveStar() {
-//     choice.forEach((star) => {
-//       star.classList.remove('active');
+//     links.forEach((link) => {
+//       link.classList.remove('active');
 //     })
 //   }
 //   function removeActiveContent() {
-//     text.forEach((star) => {
-//       star.classList.remove('active');
+//     des.forEach((link) => {
+//       link.classList.remove('active');
 //     })
 //   }
+const link = document.querySelectorAll(".links");
+const des = document.querySelectorAll(".des");
+link.forEach((star) => {
+  star.addEventListener('click', () =>{
+    removeActiveStar();
+    star.classList.add('active');
+    const activeContent= document.querySelector(`#${star.id}-content`);
+    removeActiveContent();
+    activeContent.classList.add("active");
+  })
+});
+
+function removeActiveStar() {
+  link.forEach((star) => {
+    star.classList.remove('active');
+  })
+}
+function removeActiveContent() {
+  des.forEach((star) => {
+    star.classList.remove('active');
+  })
+}
