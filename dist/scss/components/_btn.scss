@@ -2,30 +2,35 @@
     padding: 1.5rem 3rem;
     text-align: center;
     border: 1px solid #01b3a7;
-    position: relative;
+    position: relative; 
+    
+  
     a{
         color: black;
         z-index: 2;
-        &:after {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: transparent;
-            transform: scaleX(0);
-            transform-origin: bottom right;
-            transition: transform 0.25s ease-out;
-          }
-          &:hover:after {
-            background: #01b3a7;
-            transform: scaleX(1);
-            transform-origin: bottom center;
-          }
     }
-    a:hover{
+    &:hover a{
         color: white;
+        
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform .5s ease;
+    }
+    &:hover:after {
+      background: #01b3a7;
+      transform: scaleX(1);
+      transform-origin: bottom center;
+    
+    
     }
 }
