@@ -86,5 +86,29 @@ var slider = tns({
   autoplay: true,
   axis: "horizontal",
   speed: 300,
+    responsive:{
+      970:{
+        items: 2,
+        autoplay: true,
+      }
+    }
+  
+});
+
+//gallery slider
+
+var slider = tns({
+  container: '.gallery__wrapper',
+  items: 1,
+  slideBy: 'page',
+  autoplay: true,
+  axis: "horizontal",
+  speed: 300,
+    responsive:{
+      970:{
+        items: 6,
+        autoplay: true,
+      }
+    }
   
 });
